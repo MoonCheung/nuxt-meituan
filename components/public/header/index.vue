@@ -7,7 +7,7 @@
     </el-row>
     <el-row>
       <el-col>
-
+        <search-bar />
       </el-col>
     </el-row>
   </div>
@@ -15,10 +15,12 @@
 
 <script>
 import topBar from './topbar'
+import searchBar from './searchbar';
 
 export default {
   components: {
-    topBar
+    topBar,
+    searchBar
   }
 }
 </script>
