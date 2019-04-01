@@ -5,16 +5,16 @@
         <nuxt-link to="/my">我的美团</nuxt-link>
         <dl>
           <dd>
-            <nuxt-link to="/my">我的订单</nuxt-link>
+            <nuxt-link to="/order">我的订单</nuxt-link>
           </dd>
           <dd>
-            <nuxt-link to="/my">我的收藏</nuxt-link>
+            <nuxt-link to="/order">我的收藏</nuxt-link>
           </dd>
           <dd>
-            <nuxt-link to="/my">抵用券</nuxt-link>
+            <nuxt-link to="/order">抵用券</nuxt-link>
           </dd>
           <dd>
-            <nuxt-link to="/my">账户设置</nuxt-link>
+            <nuxt-link to="/order">账户设置</nuxt-link>
           </dd>
         </dl>
       </li>
@@ -72,7 +72,50 @@
             <dd>热映电影</dd>
             <dd>热映电影</dd>
           </dl>
-
+          <dl>
+            <dt>手机应用</dt>
+            <dd>
+              <a href="#">
+                <img src="//s0.meituan.net/bs/fe-web-meituan/e5eeaef/img/appicons/meituan.png"
+                     title="美团APP"
+                     alt="美团" /></a>
+            </dd>
+            <dd>
+              <a href="#">
+                <img src="//s0.meituan.net/bs/fe-web-meituan/e5eeaef/img/appicons/meituan.png"
+                     title="美团app"
+                     alt="美团app">
+              </a>
+            </dd>
+            <dd>
+              <a href="#">
+                <img src="//s0.meituan.net/bs/fe-web-meituan/e5eeaef/img/appicons/meituan.png"
+                     title="美团app"
+                     alt="美团app">
+              </a>
+            </dd>
+            <dd>
+              <a href="#">
+                <img src="//s0.meituan.net/bs/fe-web-meituan/e5eeaef/img/appicons/meituan.png"
+                     title="美团app"
+                     alt="美团app">
+              </a>
+            </dd>
+            <dd>
+              <a href="#">
+                <img src="//s0.meituan.net/bs/fe-web-meituan/e5eeaef/img/appicons/meituan.png"
+                     title="美团app"
+                     alt="美团app">
+              </a>
+            </dd>
+            <dd>
+              <a href="#">
+                <img src="//s0.meituan.net/bs/fe-web-meituan/e5eeaef/img/appicons/meituan.png"
+                     title="美团app"
+                     alt="美团app">
+              </a>
+            </dd>
+          </dl>
         </div>
       </li>
     </ul>
