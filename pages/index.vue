@@ -5,7 +5,7 @@
         <emenu />
       </el-col>
       <el-col :span="19">
-        2
+        <life />
       </el-col>
     </el-row>
     <el-row>
@@ -18,10 +18,12 @@
 
 <script>
 import Emenu from '@/components/index/menu'
+import Life from '@/components/index/life'
 
 export default {
   components: {
-    Emenu
+    Emenu,
+    Life
   }
 }
 </script>
