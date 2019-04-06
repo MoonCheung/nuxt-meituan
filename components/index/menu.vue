@@ -1,10 +1,23 @@
 <template>
   <div class="m-menu">
-    <dl class="nav">
+    <dl class="nav"
+        @mouseleave="leave">
       <dt>全部分类</dt>
-      <dd></dd>
+      <dd v-for="(item, index) in menu"
+          :key="index"
+          @mouseenter="enter">
+        <i :class="item.type" />{{ item.name }}<span class="arrow" />
+      </dd>
     </dl>
-    <div class="detail">
+    <div v-if="kind"
+         class="detail"
+         @mouseenter="childEnter"
+         @mouseleave="childLeave">
+      <template v-for="(item, index) in curdetail.child">
+        <h4 :key="index">{{ item.title }}</h4>
+        <span v-for="v in item.child"
+              :key="v">{{ v }}</span>
+      </template>
 
     </div>
   </div>
@@ -50,9 +63,33 @@ export default {
     }
   },
   //计算属性被混入vue实例
-  computed: {},
+  computed: {
+    curdetail: function() {
+      return this.menu.filter(item => item.type === this.kind)[0]
+    }
+  },
   //方法被混入vue实例
-  methods: {}
+  methods: {
+    //当指针离开元素，就会触发此事件
+    leave: function() {
+      let self = this
+      self._timer = setTimeout(function() {
+        self.kind = ''
+      }, 200)
+    },
+    //当指针移动到元素，就会触发此事件
+    enter: function(e) {
+      this.kind = e.target.querySelector('i').className
+    },
+    //当指针离开子元素，就会触发此事件
+    childLeave: function() {
+      this.kind = ''
+    },
+    //当指针移动到子元素，就会触发此事件
+    childEnter: function() {
+      clearTimeout(this._timer)
+    }
+  }
 }
 </script>
 
