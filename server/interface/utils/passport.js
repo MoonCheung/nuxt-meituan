@@ -3,11 +3,11 @@ import LocalStrategy from 'passport-local'
 import UserModel from '../../dbs/models/users'
 
 passport.use(
-  new LocalStrategy(function (username, password, done) {
+  new LocalStrategy(async function (username, password, done) {
     let where = {
       username
     };
-    let result = await UserModel.findOne(where);
+    let result = await UserModel.findOne(where)
     if (result != null) {
       if (result.password === password) {
         return done(null, result)
